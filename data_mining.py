@@ -22,3 +22,4 @@ for i in range(0,length):
         dataframe["Course"]=code("mined data/Cource/cource{}.csv".format(j-1))
         codee.append(code("mined data/Cource/cource{}.csv".format(j-1)))
         dataframe.to_csv('mined data/Student info/student{}.csv'.format(j-1))
+        
