@@ -11,10 +11,10 @@ from os.path import isfile, join
 from data_mining import mine_data
 
 
+get_college = [f for f in listdir("DSE Data/cap1 AllotmentFinal") if isfile(join("DSE Data/cap1 AllotmentFinal/", f))]
 
-get_college = [f for f in listdir("DSE Data/cap2 Allotment Final") if isfile(join("DSE Data/cap2 Allotment Final/", f))]
 
 
 for college in get_college:
-    path="DSE Data/cap2 Allotment Final/{}".format(college)
+    path="DSE Data/cap1 AllotmentFinal/{}".format(college)
     mine_data(path, college)
