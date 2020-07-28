@@ -18,11 +18,11 @@ def mine_data(path,college):
     for i in range(0,length):
         shape=pdf[i].shape
         if shape[1] <= 2:
-            course_path="mined data/Cap-1 Cource/cource{}-{}.csv".format(college_code,i)
+            course_path="mined data/Cap-3 Cource/cource{}-{}.csv".format(college_code,i)
             pdf[i].to_csv(course_path)
             course_code=(code(course_path))
         else:
-            student_deatil_path="mined data/Cap-1 Student info/student{}-{}.csv".format(course_code,college_code)
+            student_deatil_path="mined data/Cap-3 Student info/student{}-{}.csv".format(course_code,college_code)
             if os.path.exists(student_deatil_path):
                 dataFrame=pd.read_csv(student_deatil_path)
                 pdf[i].to_csv(student_deatil_path)
