@@ -8,6 +8,7 @@ import pandas as pd
 import camelot
 from get_course_code import code
 import os
+import time
 
 def mine_data(path,college):
     pdf=camelot.read_pdf(path,pages='all')
@@ -38,3 +39,5 @@ def mine_data(path,college):
                 dataFrame["cource_code"]=course_code
                 dataFrame["college_code"]=college_code
                 dataFrame.to_csv(student_deatil_path)
+        
+        time.sleep(1)
